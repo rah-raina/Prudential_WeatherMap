@@ -1,0 +1,78 @@
+import groovyx.gpars.GParsPool
+import net.masterthought.cucumber.ReportBuilder
+
+apply plugin : 'java'
+apply plugin : 'groovy'
+
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath "net.masterthought:cucumber-reporting:2.4.0","org.codehaus.gpars:gpars:1.2.1"  
+    }
+
+}
+
+
+dependencies {
+
+    implementation 'com.google.guava:guava:23.0'
+    testImplementation 'junit:junit:4.12'    
+	compile group: 'info.cukes', name: 'cucumber-java', version: '1.2.4'
+	compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.44.0'
+	compile group: 'info.cukes', name: 'cucumber-junit', version: '1.2.4'
+	compile group: 'net.masterthought', name: 'cucumber-reporting', version: '2.4.0'
+	compile group: 'info.cukes', name: 'cucumber-core', version: '1.2.4'
+	compile group: 'org.assertj', name: 'assertj-core', version: '1.0.0'
+	
+	
+}
+
+repositories {
+	mavenLocal()
+    jcenter()
+}
+
+ configurations { cucumberRuntime { extendsFrom testRuntime } }
+
+task runTestInParallel {
+
+	dependsOn assemble, compileTestJava
+	doLast {runWeatherTests()}
+}
+
+def runWeatherTests() {
+
+	def features = fileTree(dir: "${project.projectDir}/src/test/resources/features/").include '**/*.feature'
+	
+	GParsPool.withPool(20){
+	
+	features.eachParallel{ File file ->
+		javaexec {
+		
+		main = "cucumber.api.cli.Main"
+		classpath = configurations.cucumberRuntime + sourceSets.main.output +  sourceSets.test.output
+		args = [
+			'--tags',
+			"@tc101",
+			'--plugin',
+			"html:target/html/${file.name}.html",	
+			'--plugin',
+			"json:target/json/${file.name}.json",
+			'--plugin',
+			"junit:target/junit/${file.name}.xml",
+			'--plugin',
+			'pretty',
+			'--glue',
+			'stepDefinitions',
+			"src/test/resources/features/$file.name"
+			]
+			}		
+		}
+	
+	}
+}
+
