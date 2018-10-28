@@ -23,14 +23,14 @@ Project built to create and execute Automation testcases for web application "ht
 
 ## Framework 
 
->PATH=/src/test/resources/doc/FrameworkDiagram
+>PATH=/doc/FrameworkDiagram
 
 ![FrameworkDiagram](./FrameworkDiagram.PNG "FrameworkDiagram")
 --------------------------------------------------------------------
 
 ## Project Structure
 
->PATH=/src/test/resources/doc/ProjectStructure
+>PATH=/doc/ProjectStructure
 
 ![ProjectStructure](./ProjectStructure.PNG "ProjectStructure")
 
@@ -38,7 +38,7 @@ Project built to create and execute Automation testcases for web application "ht
 
 ## Gradle Task
 
->PATH=/src/test/resources/doc/GradleTask
+>PATH=/doc/GradleTask
 
 ![GradleTask](./GradleTask.PNG "GradleTask")
 
@@ -46,7 +46,7 @@ Project built to create and execute Automation testcases for web application "ht
 
 ## Jenkins Job
 
->PATH=/src/test/resources/doc/JenkinsJob
+>PATH=/doc/JenkinsJob
 
 ![JenkinsJob](./JenkinsJob.PNG "JenkinsJob")
 
@@ -54,6 +54,6 @@ Project built to create and execute Automation testcases for web application "ht
 
 ## Cucumber Reports
 
->PATH=/src/test/resources/doc/CucumberReportInJenkins
+>PATH=/doc/CucumberReportInJenkins
 
 ![CucumberReportInJenkins](./CucumberReportInJenkins.PNG "CucumberReportInJenkins")
