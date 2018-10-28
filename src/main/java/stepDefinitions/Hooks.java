@@ -14,6 +14,12 @@ import utilities.FileReader;
 
 import org.openqa.selenium.OutputType;
 
+/**
+ * @author rahulr
+ * 
+ * Hooks class to setup webdriver and read config property file 
+ *
+ */
 public class Hooks {
 	public static WebDriver driver;
 	private static DriverType driverType;
@@ -71,6 +77,7 @@ public class Hooks {
 	public void closeDriver() {
 		driver.close();
 		driver.quit();
+		driver = null;
 	}
 	
 	public void embedScreenshot(Scenario scenario) {

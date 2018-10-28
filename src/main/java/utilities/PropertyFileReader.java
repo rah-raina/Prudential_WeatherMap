@@ -9,6 +9,10 @@ import java.util.Properties;
 import enums.DriverType;
 import enums.ExecutionType;
 
+/**
+ * @author rahulr
+ * PropertyFileReader to read test configuration property file
+ */
 public class PropertyFileReader {
 	private Properties properties;
 	private final String propertyFilePath = "config//TestConfiguration.properties";

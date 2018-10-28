@@ -2,6 +2,10 @@ package utilities;
 
 import utilities.PropertyFileReader;
 
+/**
+ * @author rahulr
+ * File Reader class to perform file read operation
+ */
 public class FileReader {
 
 	private static FileReader fileReaderManager = new FileReader();
