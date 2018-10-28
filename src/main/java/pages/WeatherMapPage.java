@@ -90,18 +90,19 @@ public class WeatherMapPage extends BasePage {
 	}
 
 	public void verifyErrorMessage(String errorMsg) {
-		assertThat(getTextOfWebElement(lstForcast)).as("Hompage image is not displayed").contains(errorMsg);
+		waitABit(1000);
+		assertThat(getTextOfWebElement(lstForcast)).as("Error message is not displayed").contains(errorMsg);
 		
 	}
 
 	public void userSelectsCity(String city) {
-		assertThat(getTextOfWebElement(lstForcast)).as("Hompage image is not displayed").contains(city);
+		assertThat(getTextOfWebElement(lstForcast)).as("City is not displayed").contains(city);
 		WebElement element = selectLinkFromTable(lstForcast,city);
 		clickAWebElement(element);
 	}
 	
 	public void verifyCityWeather(String city) {
-		assertThat(getTextOfWebElement(classWeatherWidget)).as("Hompage image is not displayed").contains("Weather in " + city);
+		assertThat(getTextOfWebElement(classWeatherWidget)).as("City weather is not displayed").contains("Weather in " + city);
 	}
 	
 	public void verifyTabsDisplayedForViewingForcast(String tabs) {

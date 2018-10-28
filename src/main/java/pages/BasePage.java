@@ -10,6 +10,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import stepDefinitions.Hooks;
 import utilities.FileReader;
@@ -116,5 +118,14 @@ public class BasePage extends Hooks {
 		double celsius;
 		celsius = Math.round((fahrenheit - 32) * 5 / 9);
 		return celsius;
+	}
+	
+	public void waitABit(long timeInMilliseconds) {
+		try {
+			Wait<WebDriver> wait = new WebDriverWait(driver, 150);
+			wait.wait(timeInMilliseconds);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
