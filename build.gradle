@@ -57,7 +57,7 @@ def runWeatherTests() {
 		classpath = configurations.cucumberRuntime + sourceSets.main.output +  sourceSets.test.output
 		args = [
 			'--tags',
-			"@tc101",
+			"@weatherMap",
 			'--plugin',
 			"html:target/html/${file.name}.html",	
 			'--plugin',
