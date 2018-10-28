@@ -18,6 +18,7 @@ Project built to create and execute Automation testcases for web application "ht
 * Reporting is handled through cucumber reports.
 * RunCukesTest class acts as runner class.
 * build.gradle file contains project dependencies and tasks to execute.
+* Assertions are handled using assertJ api.
 
 --------------------------------------------------------------------
 
