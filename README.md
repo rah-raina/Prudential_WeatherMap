@@ -23,37 +23,27 @@ Project built to create and execute Automation testcases for web application "ht
 
 ## Framework 
 
->PATH=/doc/FrameworkDiagram
-
-![FrameworkDiagram](./FrameworkDiagram.PNG "FrameworkDiagram")
+![FrameworkDiagram](./doc/FrameworkDiagram.PNG "FrameworkDiagram")
 --------------------------------------------------------------------
 
 ## Project Structure
 
->PATH=/doc/ProjectStructure
-
-![ProjectStructure](./ProjectStructure.PNG "ProjectStructure")
+![ProjectStructure](./doc/ProjectStructure.PNG "ProjectStructure")
 
 --------------------------------------------------------------------
 
 ## Gradle Task
 
->PATH=/doc/GradleTask
-
-![GradleTask](./GradleTask.PNG "GradleTask")
+![GradleTask](./doc/GradleTask.PNG "GradleTask")
 
 --------------------------------------------------------------------
 
 ## Jenkins Job
 
->PATH=/doc/JenkinsJob
-
-![JenkinsJob](./JenkinsJob.PNG "JenkinsJob")
+![JenkinsJob](./doc/JenkinsJob.PNG "JenkinsJob")
 
 --------------------------------------------------------------------
 
 ## Cucumber Reports
 
->PATH=/doc/CucumberReportInJenkins
-
-![CucumberReportInJenkins](./CucumberReportInJenkins.PNG "CucumberReportInJenkins")
+![CucumberReportInJenkins](./doc/CucumberReportInJenkins.PNG "CucumberReportInJenkins")
