@@ -58,9 +58,10 @@ public class WeatherMapPage extends BasePage {
 	
 	public void isOnHomepage() {
 		opeUrl();
+		assertThat(getTitle()).as("Page Title Not displayed").contains("OpenWeatherMap");
 		
 	}
-
+	
 	public void verifyTabsDisplayed(String tabs) {
 		List<WebElement> actualTabElements = this.driver.findElements(homepageTabs);
 		

@@ -30,6 +30,11 @@ public class BasePage extends Hooks {
 		this.driver = Hooks.driver;
 		PageFactory.initElements(this.driver, this);
 	}
+	
+	public String getTitle() {
+		String pageTitle = this.driver.getTitle();
+		return pageTitle;
+	}
 
 	public void opeUrl() {
 		String url = FileReader.getInstance().getConfigReader().getApplicationUrl();
